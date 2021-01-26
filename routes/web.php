@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+Route::view('/', 'welcome')->middleware(['auth'])->name('home');
 Route::view('/about', 'about')->middleware(['auth'])->name('about');
 
 Route::get('/dashboard', function () {
